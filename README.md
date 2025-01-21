@@ -21,8 +21,8 @@ This project demonstrates how to use FastAPI with PostgreSQL. It includes a basi
 Clone this repository to your local machine:
 
 ```
-git clone https://github.com/your-repository-url.git
-cd your-repository-directory
+git clone git@github.com:sbstnzcr/holidays.git
+cd holidays
 ```
 
 ### 2. Create a `.env` File
