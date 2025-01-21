@@ -16,7 +16,7 @@ This project demonstrates how to use FastAPI with PostgreSQL. It includes a basi
 
 ## Setup Instructions
 
-### 1. Clone the Repository
+### Clone the Repository
 
 Clone this repository to your local machine:
 
@@ -25,7 +25,7 @@ git clone git@github.com:sbstnzcr/holidays.git
 cd holidays
 ```
 
-### 2. Create a `.env` File
+### Create a `.env` File
 
 Create a `.env` file in the root of the project with the following content:
 
@@ -36,7 +36,7 @@ POSTGRES_DB=db
 POSTGRES_HOST=localhost
 ```
 
-### 3. Spin Up Docker Containers
+### Spin Up Docker Containers
 
 The project includes a `docker-compose.yml` file to spin up a PostgreSQL container. In the root of the project, run the following command to start the services:
 
@@ -46,7 +46,7 @@ docker-compose up
 
 This will start PostgreSQL and the necessary volumes for persistent data.
 
-### 4. Run Database Creation Script
+### Run Database Creation Script
 
 Once the PostgreSQL container is up, you can run the database creation script to set up the required table. The script will fetch holiday data and insert it into the database.
 
@@ -60,7 +60,7 @@ This script will:
 - Create the `feriados` table in your PostgreSQL database.
 - Fetch holiday data for the year 2024 from the external API and insert it into the table.
 
-### 5. Spin Up the FastAPI Application
+### Spin Up the FastAPI Application
 
 After setting up the database, start the FastAPI app with the following command:
 
@@ -70,7 +70,9 @@ uvicorn app:app --reload
 
 The FastAPI app will be accessible at [http://localhost:8000](http://localhost:8000).
 
-### 6. API Endpoints
+### API Endpoints
+
+Once the FastAPI app is running, you can access the interactive Swagger [docs](http://localhost:8000/docs).
 
 You can now access the following endpoints:
 
@@ -82,21 +84,12 @@ Example request for a specific date:
 curl http://localhost:8000/holiday/2024-12-25
 ```
 
-### 7. Stopping the Services
+### Stopping the Services
 
 Once you're done, you can stop the services by running:
 
 ```
 docker-compose down
-```
-
-### 8. Troubleshooting
-
-- If you run into any issues with database connections, ensure your `.env` variables are correct and that the PostgreSQL container is running.
-- If you face issues with the FastAPI app not starting, check the logs with:
-
-```
-docker-compose logs
 ```
 
 ## Project Structure
